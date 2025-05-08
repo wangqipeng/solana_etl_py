@@ -10,6 +10,7 @@ def main():
     all_records = []
     for slot in range(START_SLOT, END_SLOT):
         block = get_block(slot)
+        print(block)
         if block and 'transactions' in block:
             parsed = parse_transactions(slot, block['transactions'])
             all_records.extend(parsed)

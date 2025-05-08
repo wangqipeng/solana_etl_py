@@ -2,7 +2,7 @@ import requests
 from config import RPC_ENDPOINT
 
 
-def determine_slot_range(window_size=100):
+def determine_slot_range(window_size=10):
     end_slot = get_current_slot()
     start_slot = max(0, end_slot - window_size)
     return start_slot, end_slot
